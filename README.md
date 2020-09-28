@@ -114,4 +114,80 @@
     $ git pull
 
 
-### Branch Nedir?
+### Git Status Nedir?
+> Repository'inin o anki durumu hakkında bilgi verir. Değişiklik yapılmış veya yeni eklenmiş fakat add ya da commit işlemi uygulanmamış dosyalar varsa bunları liste halinde gösterir.
+
+    $ git status
+
+
+### Branch (Dal) Nedir?
+> Branchler projelerimizi dallara ayırmamızı sağlarlar. Örnek vermek gerekirse; projeye yeni bir özellik (feature) eklemek ve projemizin o anki haline bir şey olmadan geliştirmeye devam etmek istiyoruz. Branchler sayesinde projemizin kopyasını çıkartıp onun üzerinden geliştirme yapabiliriz. Geliştirme tamamalandıktan sonra master* ile mergeleyip geliştirmeyi canlıya aktarabiliriz.
+
+> *: master repository'nin ana dalıdır.
+
+
+### Git Branch Nedir?
+> branch komutu ile yeni dal oluşturabiliriz ve dalları görüntüleyebiliriz.
+
+    $ git branch
+    // tüm dalları görüntülemek için kullanılır
+
+    $ git branch "feature"
+    // feature adında dal oluşturmak için kullanılır
+
+
+### Git Checkout Nedir?
+> checkout komutu ile dallar arası geçiş yapmak için kullanılır.
+
+    $ git checkout master
+    // master dalına geçer
+
+    $ git checkout -b "feature"
+    // -b argümanı ile feature adında dal oluşturur ve ona geçiş yapar
+
+
+### Git Merge Nedir?
+> merge komutu ile her hangi bir dalda yaptığımız değişiklikleri buluduğumuz dal ile birleştirir.
+
+    $ git merge feature
+    // master dalında olduğumuzu varsayalım, feature dalını master'la birleştirir
+
+
+## İleri Seviye
+
+### Git Log Nedir?
+> log komutu ile branch'e hangi değişikliklerin (commitlerin) gönderildiğini görebiliriz.
+
+    $ git log
+
+    commit 42c3182018cc621f9b925e04e6b3ff4bc3d87425 (HEAD -> master, origin/master, origin/HEAD)
+    Merge: 6f56790 7f9ac7d
+    Author: ufuk-cameralyze <70563648+ufuk-cameralyze@users.noreply.github.com>
+    Date:   Mon Sep 28 15:19:45 2020 +0300
+
+    Merge pull request #122 from cameralyze/bug-fix
+
+    bug-fix comment: Bug Fix
+
+> son branch üzerine gönderilmiş commiti görebilmek için;
+
+    $ git log -n1
+
+
+### Commitler arası geçiş yapmak
+> git log ile commitleri listeledikten sonra commit'in sağında yer alan sha1 kodu ile geçiş yapabiliriz. Bu kodun ilk 7 karakterini veya tamamını kullanabiliriz.
+
+    $ git checkout 42c3182018cc621f9b925e04e6b3ff4bc3d87425
+
+
+### Yapılan değişiklikleri silmek
+> branch üzerinde yaptığımız değişikleri temizleyebiliriz.
+
+    $ git reset --hard
+    // tüm değişiklikleri temizler
+
+    $ git reset --mixed
+    // dizinleri temizler ama değişikliklere dokunmaz. git add yapıp dizinlere ekleme yaptığımızda onu temizler ama değişiklik yapılan dosyaya bir şey olmaz.
+
+    $ git reset --soft 
+    // Git reset komutuna soft parametresini verip bir commit belirtirseniz eğer, Git bu belirttiğimiz commiti ve sonrasındaki commitleri silecektir, düzenlenmiş dosyalar da Git’e eklenmiş hale gelecektir. Dosyalardaki değişiklikler bozulmayacaktır.
