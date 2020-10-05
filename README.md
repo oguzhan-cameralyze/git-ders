@@ -190,6 +190,12 @@
 
     Saved working directory and index state WIP on test: 2f47a70 Updated README.md
 
+> Değişikliği kaydederken mesaj eklemek
+
+    $ git stash push -m "mesaj"
+
+    Saved working directory and index state On master: mesaj
+
 > Sakladığımız değişilikleri listeleme
 
     $ git stash list
