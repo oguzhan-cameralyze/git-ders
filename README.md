@@ -219,6 +219,7 @@
     $ git stash clear
     // tüm değişiklikleri temizler
 
+
 ### Yapılan değişiklikleri silmek
 > branch üzerinde yaptığımız değişikleri temizleyebiliriz.
 
@@ -230,3 +231,15 @@
 
     $ git reset --soft 
     // Git reset komutuna soft parametresini verip bir commit belirtirseniz eğer, Git bu belirttiğimiz commiti ve sonrasındaki commitleri silecektir, düzenlenmiş dosyalar da Git’e eklenmiş hale gelecektir. Dosyalardaki değişiklikler bozulmayacaktır.
+
+### Rollback (Geri Alma)
+> $ git reset --hard **<tag/branch/commit-id>**
+
+    $ git log
+    // git log ile commitlere inceleyip dönmek istediğimiz commitin sha1 kodunu koplayalıyoruz
+
+    $ git reset --hard <commit-id>
+    // reset --hard ile commite geçiş yapıyoruz
+
+    $ git push -f
+    // -f argümanı ile tekrar gönderme işlemi yapıyoruz. f: force
