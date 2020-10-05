@@ -180,6 +180,34 @@
     $ git checkout 42c3182018cc621f9b925e04e6b3ff4bc3d87425
 
 
+### Çalışmaya ara vermek (Çalışmayı saklamak)
+> Çalışmalarımızın ortasında farklı bir branch'e geçip Code Review yapmamız gerekebilir veyahut başka branche geçip onun üzerinde çalışmamız gerekebilir. Ama değişliklerimizi localde tutmak, commit etmek istemeyebiliriz. **git stash** ile yaptığımız değişiklikleri saklayabiliriz ara verebiliriz.
+
+> Değişikliklerimizi saklamadan önce git add yapıp değişiklikleri dizine eklemeliyiz. Yoksa git değişiklik olduğunu anlamayacaktır.
+
+    $ git add .
+    $ git stash save
+
+    Saved working directory and index state WIP on test: 2f47a70 Updated README.md
+
+> Sakladığımız değişilikleri listeleme
+
+    $ git stash list
+
+    stash@{0}: WIP on test: 2f47a70 Updated README.md
+
+> Sakladığımız değişiklikleri açığa çıkarmak (uygulamak)
+
+    $ git stash pop
+    // en üstteki değişikliği açığa çıkarır ve stash'i siler
+
+    $ git stash pop stash@{1}
+    // stash@{1} nolu değişikliği açığa çıkarır ve stash'i siler
+
+    $ git stash apply stash@{1}
+    // stash@{1} nolu değişikliği silmeden açığa çıkarır
+
+
 ### Yapılan değişiklikleri silmek
 > branch üzerinde yaptığımız değişikleri temizleyebiliriz.
 
