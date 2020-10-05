@@ -204,9 +204,14 @@
     $ git stash pop stash@{1}
     // stash@{1} nolu değişikliği açığa çıkarır ve stash'i siler
 
-    $ git stash apply stash@{1}
-    // stash@{1} nolu değişikliği silmeden açığa çıkarır
+    $ git stash apply stash@{2}
+    // stash@{2} nolu değişikliği silmeden açığa çıkarır
 
+    $ git stash drop stash@{0}
+    // stash@{0} nolu değişikliği siler
+
+    $ git stash clear
+    // tüm değişiklikleri temizler
 
 ### Yapılan değişiklikleri silmek
 > branch üzerinde yaptığımız değişikleri temizleyebiliriz.
