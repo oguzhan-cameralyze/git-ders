@@ -2,7 +2,7 @@
 
 
 ### Git Nedir?
-> Git, 2005 yılında Linus Torvalds tarafından piyasaya sürülmüştür. Yazılım geliştirme süreçlerinde kullanılan, takım çalışmasını kolaylaştıran **sürüm kontrol sistemidir.** Tamamen ücretsizdir ve kullanımı kolaydır. Alternatif örneği olarak [Mercurial](https://www.mercurial-scm.org/about)'i verebiliriz.
+> Git, 2005 yılında Linus Torvalds tarafından piyasaya sürülmüştür. Yazılım geliştirme süreçlerinde kullanılan, takım çalışmasını kolaylaştıran **sürüm kontrol sistemidir.** Tamamen ücretsizdir ve kullanımı kolaydır. Alternatif olarak [Mercurial](https://www.mercurial-scm.org/about)'i örnek verebiliriz.
 
 
 ### Git Kurulumu
@@ -45,7 +45,7 @@
 
 
 ### Local Repository'i Remote'a Göndermek (Bağlamak)
-> Repolarımızı GitHub'a yükleyebiliriz. [GitHub](http://github.com/), Sürüm kontrol sistemi olarak git kullanan yazılım geliştirme projeleri için web tabanlı depolama servisidir. Rakipleri; [BitBucket](https://bitbucket.org/), [GitLab](https://gitlab.com/) ve [AWS CodeCommit](https://aws.amazon.com/tr/codecommit/) vb. sayabiliriz.
+> Repolarımızı GitHub'a yükleyebiliriz. [GitHub](http://github.com/), Sürüm kontrol sistemi olarak git kullanan yazılım geliştirme projeleri için web tabanlı depolama servisidir. Rakipleri; [BitBucket](https://bitbucket.org/), [GitLab](https://gitlab.com/) ve [AWS CodeCommit](https://aws.amazon.com/tr/codecommit/) vb.
 
 > Remote göndermeden önce repo içerisinde dosya bulunması gerekiyor. Dosya varmış gibi devam edelim.
 
