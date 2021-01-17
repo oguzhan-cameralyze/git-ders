@@ -2,7 +2,7 @@
 
 
 ### Git Nedir?
-> Git, 2005 yılında Linus Torvalds tarafından piyasaya sürülmüştür. Yazılım geliştirme süreçlerinde kullanılan, takım çalışmasını kolaylaştıran **sürüm kontrol sistemidir.** Tamamen ücretsizdir ve kullanımı kolaydır. Alternatif olarak [Mercurial](https://www.mercurial-scm.org/about)'i örnek verebiliriz.
+> Git, 2005 yılında Linus Torvalds tarafından piyasaya sürülmüştür. Yazılım geliştirme süreçlerinde kullanılan, takım çalışmasını kolaylaştıran **sürüm kontrol sistemidir.** Tamamen ücretsizdir ve kullanımı kolaydır. Alternatif olarak [Mercurial](https://www.mercurial-scm.org/about)'i örnek verebiliriz..
 
 
 ### Git Kurulumu
